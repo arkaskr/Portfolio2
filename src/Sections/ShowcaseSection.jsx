@@ -1,7 +1,8 @@
-import { useRef } from "react";
+import { useRef, useState } from "react";
 import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import { useGSAP } from "@gsap/react";
+import { ChevronLeft, ChevronRight } from "lucide-react";
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -10,6 +11,28 @@ const ShowcaseSection = () => {
   const rydeRef = useRef(null);
   const libraryRef = useRef(null);
   const ycDirectoryRef = useRef(null);
+
+  const [mainIndex, setMainIndex] = useState(0);
+  const [sideTopIndex, setSideTopIndex] = useState(0);
+  const [sideBottomIndex, setSideBottomIndex] = useState(0);
+
+  const mainImages = [
+    "/images/project1.png",
+    "/images/project1.1.png",
+    "/images/project1.2.png",
+    "/images/project1.3.png",
+  ];
+  const sideTopImages = [
+    "/images/op1.png",
+    "/images/op1.1.png",
+    "/images/op1.3.png",
+    "/images/op1.4.png",
+    "/images/op1.5.png",
+    "/images/op1.6.png",
+    "/images/op1.7.png",
+    "/images/op2.png",
+  ];
+  const sideBottomImages = ["/images/project3.png"];
 
   useGSAP(() => {
     // Animation for the main section
@@ -48,37 +71,172 @@ const ShowcaseSection = () => {
       <div className="w-full">
         <div className="showcaselayout">
           <div ref={rydeRef} className="first-project-wrapper">
-            <div className="image-wrapper">
-              <img src="/images/project1.png" alt="Ryde App Interface" />
+            <div className="custom-bg-wrapper bg-[#1E293B] rounded-2xl p-4">
+              <div className="image-inner-wrapper">
+                <img
+                  src={mainImages[mainIndex]}
+                  alt="Ryde App Interface"
+                  className="rounded-xl w-full h-full object-contain"
+                />
+
+                <div className="absolute bottom-8 left-1/2 -translate-x-1/2 flex gap-3">
+                  <button
+                    onClick={() =>
+                      setMainIndex((prev) =>
+                        prev > 0 ? prev - 1 : mainImages.length - 1
+                      )
+                    }
+                  >
+                    <ChevronLeft className="text-white bg-black/50 p-1 rounded-full" />
+                  </button>
+                  <button
+                    onClick={() =>
+                      setMainIndex((prev) => (prev + 1) % mainImages.length)
+                    }
+                  >
+                    <ChevronRight className="text-white bg-black/50 p-1 rounded-full" />
+                  </button>
+                </div>
+              </div>
             </div>
-            <div className="text-content">
+
+            <div>
+              <a
+                href="https://chat-rizz.onrender.com/"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="cta-wrapper"
+              >
+                <div className="cta-button w-[30%] ml-3 mt-[-1rem] group">
+                  <div className="bg-circle" />
+                  <p className="text">Go To Site</p>
+                  <div className="arrow-wrapper">
+                    <img src="/images/arrow-right.svg" alt="arrow" />
+                  </div>
+                </div>
+              </a>
+            </div>
+
+            <div className="text-content pl-3">
               <h2>
-                On-Demand Rides Made Simple with a Powerful, User-Friendly App
-                called Ryde
+                A real-time chat application enabling seamless, instant
+                communication between users with a sleek and responsive
+                interface.
               </h2>
               <p className="text-white-50 md:text-xl">
-                An app built with React Native, Expo, & TailwindCSS for a fast,
-                user-friendly experience.
+                Built with modern technologies like React, Express, MongoDB,
+                Node.js, TailwindCSS, DaisyUI, and Lucide React for a fast,
+                secure, and user-friendly experience.
               </p>
             </div>
           </div>
 
           <div className="project-list-wrapper overflow-hidden">
             <div className="project" ref={libraryRef}>
-              <div className="image-wrapper bg-[#FFEFDB]">
-                <img
-                  src="/images/project2.png"
-                  alt="Library Management Platform"
-                />
+              <div className="custom-bg-wrapper bg-[#FFE7EB] rounded-2xl p-4">
+                <div className="smallimage-inner-wrapper">
+                  <img
+                    src={sideTopImages[sideTopIndex]}
+                    alt="Ryde App Interface"
+                    className="rounded-xl w-full h-full object-contain"
+                  />
+
+                  <div className="absolute bottom-8 left-1/2 -translate-x-1/2 flex gap-3">
+                    <button
+                      onClick={() =>
+                        setSideTopIndex((prev) =>
+                          prev > 0 ? prev - 1 : sideTopImages.length - 1
+                        )
+                      }
+                    >
+                      <ChevronLeft className="text-white bg-black/50 p-1 rounded-full" />
+                    </button>
+                    <button
+                      onClick={() =>
+                        setSideTopIndex(
+                          (prev) => (prev + 1) % sideTopImages.length
+                        )
+                      }
+                    >
+                      <ChevronRight className="text-white bg-black/50 p-1 rounded-full" />
+                    </button>
+                  </div>
+                </div>
               </div>
-              <h2>The Library Management Platform</h2>
+
+              <div>
+                <a
+                  href="https://op-store24.vercel.app/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="cta-wrapper"
+                >
+                  <div className="cta-buttonsmall h-[3rem] w-[30%] mt-[-1rem] group">
+                    <div className="bg-circle" />
+                    <p className="text">Go To Site</p>
+                    <div className="arrow-wrappersmall">
+                      <img src="/images/arrow-right.svg" alt="arrow" />
+                    </div>
+                  </div>
+                </a>
+              </div>
+
+              <h2>
+                Op-Store, an e-commerce website featuring exclusive One Piece
+                merchandise.
+              </h2>
             </div>
 
-            <div className="project" ref={ycDirectoryRef}>
-              <div className="image-wrapper bg-[#FFE7EB]">
-                <img src="/images/project3.png" alt="YC Directory App" />
+            <div className="project" ref={libraryRef}>
+              <div className="custom-bg-wrapper bg-[#FFE7EB] rounded-2xl p-4">
+                <div className="smallimage-inner-wrapper">
+                  <img
+                    src={sideBottomImages[sideBottomIndex]}
+                    alt="Ryde App Interface"
+                    className="rounded-xl w-full h-full object-contain"
+                  />
+
+                  <div className="absolute bottom-8 left-1/2 -translate-x-1/2 flex gap-3">
+                    <button
+                      onClick={() =>
+                        setSideBottomIndex((prev) =>
+                          prev > 0 ? prev - 1 : sideBottomImages.length - 1
+                        )
+                      }
+                    >
+                      <ChevronLeft className="text-white bg-black/50 p-1 rounded-full" />
+                    </button>
+                    <button
+                      onClick={() =>
+                        setSideBottomIndex(
+                          (prev) => (prev + 1) % sideBottomImages.length
+                        )
+                      }
+                    >
+                      <ChevronRight className="text-white bg-black/50 p-1 rounded-full" />
+                    </button>
+                  </div>
+                </div>
               </div>
-              <h2>YC Directory - A Startup Showcase App</h2>
+
+              <div>
+                <a
+                  href="https://expensify1724.netlify.app/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="cta-wrapper"
+                >
+                  <div className="cta-buttonsmall h-[3rem] w-[30%] mt-[-1rem] group">
+                    <div className="bg-circle" />
+                    <p className="text">Go To Site</p>
+                    <div className="arrow-wrappersmall">
+                      <img src="/images/arrow-right.svg" alt="arrow" />
+                    </div>
+                  </div>
+                </a>
+              </div>
+
+              <h2>Expensify- My first React Project</h2>
             </div>
           </div>
         </div>

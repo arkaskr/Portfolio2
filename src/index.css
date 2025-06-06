@@ -5,9 +5,9 @@
   --gradient: radial-gradient(circle, #e5e5e5 0%, #fff 100%);
 }
 
-::-webkit-scrollbar{
-    display: none;
- }
+::-webkit-scrollbar {
+  display: none;
+}
 
 html,
 body {
@@ -204,6 +204,16 @@ section {
         @apply text-lg md:text-xl lg:text-2xl font-semibold mt-5;
       }
     }
+    .custom-bg-wrapper {
+      @apply relative w-full max-w-4xl mx-auto mb-10;
+    }
+
+    .image-inner-wrapper {
+      @apply bg-white p-2 rounded-xl;
+    }
+    .smallimage-inner-wrapper {
+      @apply bg-black p-2 rounded-xl;
+    }
   }
 
   .cta-wrapper {
@@ -215,7 +225,30 @@ section {
 
     .bg-circle {
       @apply absolute -right-10 origin-center top-1/2 -translate-y-1/2 
-        w-[120%] h-[120%] group-hover:size-10 group-hover:right-10
+        w-[140%] h-[120%] group-hover:size-10 group-hover:right-10
+        rounded-full bg-white-50 transition-all duration-500;
+    }
+    .text {
+      @apply uppercase md:text-lg text-black transition-all duration-500
+        group-hover:text-white-50 group-hover:-translate-x-5 xl:translate-x-0 -translate-x-5;
+    }
+
+    .arrow-wrapper {
+      @apply group-hover:bg-white-50 size-10 rounded-full absolute right-10 top-1/2 
+        -translate-y-1/2 flex justify-center items-center overflow-hidden;
+
+      img {
+        @apply size-5 xl:-translate-y-32 translate-y-0 animate-bounce group-hover:translate-y-0 transition-all duration-500;
+      }
+    }
+  }
+
+  .cta-buttonsmall {
+    @apply px-4 py-4 rounded-lg bg-black-200 flex justify-center items-center relative cursor-pointer overflow-hidden;
+
+    .bg-circle {
+      @apply absolute -right-10 origin-center top-1/2 -translate-y-1/2 
+        w-[140%] h-[120%] group-hover:size-8 group-hover:right-4
         rounded-full bg-white-50 transition-all duration-500;
     }
 
@@ -224,8 +257,8 @@ section {
         group-hover:text-white-50 group-hover:-translate-x-5 xl:translate-x-0 -translate-x-5;
     }
 
-    .arrow-wrapper {
-      @apply group-hover:bg-white-50 size-10 rounded-full absolute right-10 top-1/2 
+    .arrow-wrappersmall {
+      @apply group-hover:bg-white-50 size-8 rounded-full absolute right-4 top-1/2 
         -translate-y-1/2 flex justify-center items-center overflow-hidden;
 
       img {
