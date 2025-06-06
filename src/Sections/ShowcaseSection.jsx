@@ -133,7 +133,7 @@ const ShowcaseSection = () => {
 
           <div className="project-list-wrapper overflow-hidden">
             <div className="project" ref={libraryRef}>
-              <div className="custom-bg-wrapper bg-[#FFE7EB] rounded-2xl p-4">
+              <div className="custom-bg-wrapper bg-[#ffedd7] rounded-2xl p-4">
                 <div className="smallimage-inner-wrapper">
                   <img
                     src={sideTopImages[sideTopIndex]}
@@ -188,7 +188,7 @@ const ShowcaseSection = () => {
             </div>
 
             <div className="project" ref={libraryRef}>
-              <div className="custom-bg-wrapper bg-[#FFE7EB] rounded-2xl p-4">
+              <div className="custom-bg-wrapper bg-[#ffe6ea] rounded-2xl p-4">
                 <div className="smallimage-inner-wrapper">
                   <img
                     src={sideBottomImages[sideBottomIndex]}
