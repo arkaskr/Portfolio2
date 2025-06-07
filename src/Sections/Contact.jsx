@@ -41,14 +41,14 @@ const Contact = () => {
       id="contact"
       className="min-h-screen flex items-center justify-center section-padding"
     >
-      <div className="w-full max-w-5xl px-5 md:px-10">
+      <div className="w-full max-w-5xl px-4 mt-[-16rem] sm:px-6 md:px-10">
         <TitleHeader
           title="Get in Touch – Let’s Connect"
           sub="💬 Have questions or ideas? Let’s talk! 🚀"
         />
-        <div className="mx-[8rem] mt-16">
-          <div className="xl:col-span-5 col-span-12 mx-auto">
-            <div className="flex-center card-border rounded-xl p-10">
+        <div className="mt-16 flex justify-center">
+          <div className="w-full sm:w-[90%] md:w-[80%] lg:w-[70%] xl:w-[60%]">
+            <div className="flex-center card-border rounded-xl p-6 sm:p-10">
               <form
                 ref={formRef}
                 onSubmit={handleSubmit}

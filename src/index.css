@@ -158,6 +158,10 @@ section {
     }
   }
 
+  .projects {
+      @apply text-3xl sm:text-4xl md:text-5xl font-bold text-center sm:text-left sm:ml-[6rem] sm:mt-[4rem] sm:mb-[-7rem] mt-[3rem] mb-[-6rem] text-white-50 tracking-wide;
+    }
+
   .app-showcase {
     @apply w-full mt-20 px-5 md:px-20 py-10 md:py-20 flex items-center justify-center;
 
@@ -221,48 +225,54 @@ section {
   }
 
   .cta-button {
-    @apply px-4 py-4 rounded-lg bg-black-200 flex justify-center items-center relative cursor-pointer overflow-hidden;
+    @apply px-3 py-3 sm:px-4 sm:py-4 rounded-lg bg-black-200 
+    flex justify-center items-center relative cursor-pointer overflow-hidden;
 
     .bg-circle {
       @apply absolute -right-10 origin-center top-1/2 -translate-y-1/2 
-        w-[140%] h-[120%] group-hover:size-10 group-hover:right-10
-        rounded-full bg-white-50 transition-all duration-500;
+      w-[140%] h-[120%] group-hover:size-10 group-hover:right-10
+      rounded-full bg-white-50 transition-all duration-500;
     }
+
     .text {
-      @apply uppercase md:text-lg text-black transition-all duration-500
-        group-hover:text-white-50 group-hover:-translate-x-5 xl:translate-x-0 -translate-x-5;
+      @apply uppercase text-sm sm:text-base md:text-lg text-black transition-all duration-500 
+      group-hover:text-white-50 group-hover:-translate-x-4 md:group-hover:-translate-x-5 xl:translate-x-0 -translate-x-4;
     }
 
     .arrow-wrapper {
-      @apply group-hover:bg-white-50 size-10 rounded-full absolute right-10 top-1/2 
-        -translate-y-1/2 flex justify-center items-center overflow-hidden;
+      @apply group-hover:bg-white-50 size-8 sm:size-10 rounded-full absolute right-4 sm:right-6 md:right-10 
+      top-1/2 -translate-y-1/2 flex justify-center items-center overflow-hidden;
 
       img {
-        @apply size-5 xl:-translate-y-32 translate-y-0 animate-bounce group-hover:translate-y-0 transition-all duration-500;
+        @apply size-4 sm:size-5 xl:-translate-y-32 translate-y-0 animate-bounce 
+        group-hover:translate-y-0 transition-all duration-500;
       }
     }
   }
 
   .cta-buttonsmall {
-    @apply px-4 py-4 rounded-lg bg-black-200 flex justify-center items-center relative cursor-pointer overflow-hidden;
+    @apply px-3 py-3 sm:px-4 sm:py-4 rounded-lg bg-black-200 flex justify-center items-center 
+    relative cursor-pointer overflow-hidden;
 
     .bg-circle {
       @apply absolute -right-10 origin-center top-1/2 -translate-y-1/2 
-        w-[140%] h-[120%] group-hover:size-8 group-hover:right-4
-        rounded-full bg-white-50 transition-all duration-500;
+      w-[140%] h-[120%] group-hover:size-8 group-hover:right-4 sm:group-hover:right-5
+      rounded-full bg-white-50 transition-all duration-500;
     }
 
     .text {
-      @apply uppercase md:text-lg text-black transition-all duration-500
-        group-hover:text-white-50 group-hover:-translate-x-5 xl:translate-x-0 -translate-x-5;
+      @apply uppercase text-sm sm:text-base md:text-lg text-black transition-all duration-500
+      group-hover:text-white-50 group-hover:-translate-x-4 md:group-hover:-translate-x-5 
+      xl:translate-x-0 -translate-x-4;
     }
 
     .arrow-wrappersmall {
-      @apply group-hover:bg-white-50 size-8 rounded-full absolute right-4 top-1/2 
-        -translate-y-1/2 flex justify-center items-center overflow-hidden;
+      @apply group-hover:bg-white-50 size-7 sm:size-8 rounded-full absolute right-4 sm:right-5
+      top-1/2 -translate-y-1/2 flex justify-center items-center overflow-hidden;
 
       img {
-        @apply size-5 xl:-translate-y-32 translate-y-0 animate-bounce group-hover:translate-y-0 transition-all duration-500;
+        @apply size-4 sm:size-5 xl:-translate-y-32 translate-y-0 animate-bounce 
+        group-hover:translate-y-0 transition-all duration-500;
       }
     }
   }
