@@ -18,12 +18,21 @@ const HeroLights = () => (
       intensity={40}
       color="#4cc9f0"
     />
+
+    <spotLight
+      position={[30,66,-20]}
+      angle={0.3}
+      penumbra={0.5}
+      intensity={40000}
+      color="33C3FF"
+    />
+    
     {/* purplish side fill */}
     <spotLight
       position={[-3, 5, 5]}
       angle={0.4}
       penumbra={1}
-      intensity={60}
+      intensity={40}
       color="#9d4edd"
     />
     {/* area light for soft moody fill */}

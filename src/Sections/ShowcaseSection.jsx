@@ -106,10 +106,10 @@ const ShowcaseSection = () => {
                   rel="noopener noreferrer"
                   className="cta-wrapper"
                 >
-                  <div className="cta-button w-[40%] sm:w-[60%] md:w-[40%] lg:w-[30%] sm:ml-3 mt-[-1rem] group">
+                  <div className="cta-buttonsmall w-[40%] sm:w-[60%] md:w-[40%] lg:w-[30%] sm:ml-3 mt-[-1rem] group">
                     <div className="bg-circle" />
                     <p className="text">Go To Site</p>
-                    <div className="arrow-wrapper">
+                    <div className="arrow-wrappersmall">
                       <img src="/images/arrow-right.svg" alt="arrow" />
                     </div>
                   </div>
