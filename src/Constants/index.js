@@ -89,7 +89,7 @@ const techStackIcons = [
   },
   {
     name: "Backend Developer",
-    modelPath: "/models/node-transformed.glb",
+    modelPath: "/models/node-transformedcompressed.glb",
     scale: 5,
     rotation: [0, -Math.PI / 2, 0],
   },

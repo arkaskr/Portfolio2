@@ -2,11 +2,10 @@ import React from "react";
 import { Canvas } from "@react-three/fiber";
 import { OrbitControls } from "@react-three/drei";
 import { useMediaQuery } from "react-responsive";
-import { Robo2 } from "./Robo2";
 import Particles from "./Particles";
 import { Suspense } from "react";
-import { Robo1 } from "./Robo1";
 import HeroLights from "./HeroLights";
+import { Robo1compressed } from "./Robo1compressed";
 
 const HeroExperience = () => {
   const isMobile = useMediaQuery({ query: "(max-width:768px)" });
@@ -37,7 +36,7 @@ const HeroExperience = () => {
           position={isMobile?[0, -2.8, 0]:[0, -1, 0]}
           rotation={[0, -Math.PI / 4, 0]}
         >
-          <Robo1 />
+          <Robo1compressed />
         </group>
       </Suspense>
     </Canvas>
