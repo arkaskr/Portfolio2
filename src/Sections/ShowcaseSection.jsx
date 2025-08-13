@@ -22,7 +22,10 @@ const ShowcaseSection = () => {
     "/images/project1.2.png",
     "/images/project1.3.png",
   ];
-  const sideTopImages = [
+
+  const sideTopImages = ["/images/bottomproject2.png"];
+
+  const sideBottomImages = [
     "/images/op1.png",
     "/images/op1.1.png",
     "/images/op1.3.png",
@@ -32,7 +35,6 @@ const ShowcaseSection = () => {
     "/images/op1.7.png",
     "/images/op2.png",
   ];
-  const sideBottomImages = ["/images/project3.png"];
 
   useGSAP(() => {
     gsap.fromTo(
@@ -193,7 +195,7 @@ const ShowcaseSection = () => {
                   <div className="smallimage-inner-wrapper">
                     <img
                       src={sideBottomImages[sideBottomIndex]}
-                      alt="Expensify"
+                      alt="OP-Store Project"
                       className="rounded-xl w-full h-full object-contain"
                     />
                     <div className="absolute bottom-8 left-1/2 -translate-x-1/2 flex gap-3">
@@ -221,7 +223,7 @@ const ShowcaseSection = () => {
 
                 <div>
                   <a
-                    href="https://expensify1724.netlify.app/"
+                    href="https://op-store24.vercel.app/"
                     target="_blank"
                     rel="noopener noreferrer"
                     className="cta-wrapper"
@@ -236,7 +238,8 @@ const ShowcaseSection = () => {
                   </a>
                 </div>
 
-                <h2>Expensify - My first React Project</h2>
+                <h2>Op-Store, an e-commerce website featuring exclusive One Piece
+                  merchandise.</h2>
               </div>
             </div>
           </div>

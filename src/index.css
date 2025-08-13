@@ -169,7 +169,7 @@ section {
     }
 
     .first-project-wrapper {
-      @apply h-full flex flex-col justify-between xl:w-[60%];
+      @apply h-full flex xl:flex-col flex-col justify-between xl:w-[60%];
 
       .image-wrapper {
         @apply xl:h-[70vh] md:h-[50vh] h-96 relative;

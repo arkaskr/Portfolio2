@@ -117,12 +117,14 @@ const socialImgs = [
     imgPath: "/images/fb.png",
   },
   {
-    name: "x",
-    imgPath: "/images/x.png",
+    name: "git",
+    imgPath: "/images/git.jpg",
+    url: "https://github.com/arkaskr"
   },
   {
     name: "linkedin",
     imgPath: "/images/linkedin.png",
+    url: "https://www.linkedin.com/in/arka-sarkar-808b37320/",
   },
 ];
 
