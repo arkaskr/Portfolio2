@@ -43,7 +43,11 @@ const ShowcaseSection = () => {
       { opacity: 1, duration: 1.5 }
     );
 
-    const cards = [rydeRef.current, libraryTopRef.current, libraryBottomRef.current];
+    const cards = [
+      rydeRef.current,
+      libraryTopRef.current,
+      libraryBottomRef.current,
+    ];
 
     cards.forEach((card, index) => {
       gsap.fromTo(
@@ -140,7 +144,7 @@ const ShowcaseSection = () => {
                   <div className="smallimage-inner-wrapper">
                     <img
                       src={sideTopImages[sideTopIndex]}
-                      alt="Op Store Project"
+                      alt="My_AI"
                       className="rounded-xl w-full h-full object-contain"
                     />
                     <div className="absolute bottom-8 left-1/2 -translate-x-1/2 flex gap-3">
@@ -168,7 +172,7 @@ const ShowcaseSection = () => {
 
                 <div>
                   <a
-                    href="https://op-store24.vercel.app/"
+                    href="https://my-ai24.vercel.app/"
                     target="_blank"
                     rel="noopener noreferrer"
                     className="cta-wrapper"
@@ -184,8 +188,9 @@ const ShowcaseSection = () => {
                 </div>
 
                 <h2>
-                  Op-Store, an e-commerce website featuring exclusive One Piece
-                  merchandise.
+                  A Gemini-style AI chatbot built using the Gemini API (free
+                  key), featuring a sleek UI and real-time response handling for
+                  natural language conversations.
                 </h2>
               </div>
 
@@ -238,8 +243,10 @@ const ShowcaseSection = () => {
                   </a>
                 </div>
 
-                <h2>Op-Store, an e-commerce website featuring exclusive One Piece
-                  merchandise.</h2>
+                <h2>
+                  Op-Store, an e-commerce website featuring exclusive One Piece
+                  merchandise.
+                </h2>
               </div>
             </div>
           </div>
