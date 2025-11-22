@@ -5,6 +5,7 @@ import FeatureCards from "./Sections/FeatureCards";
 import TechStack from "./Sections/TechStack";
 import Contact from "./Sections/Contact";
 import Footer from "./Sections/Footer";
+import Experience from "./Sections/Experience";
 
 
 const App = () => {
@@ -13,7 +14,8 @@ const App = () => {
       <NavBar />
       <Hero />
       <ShowcaseSection />
-      <FeatureCards/>
+      <FeatureCards />
+      <Experience/>
       <TechStack/>
       <Contact/>
       <Footer/>
