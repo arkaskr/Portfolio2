@@ -29,14 +29,11 @@ const Experience = () => {
       className="bg-[#030303] pt-24 px-4 sm:px-6 text-white"
     >
       <div className="max-w-5xl mx-auto">
-        <div className="text-center mb-20">
+        <div className="text-center mb-10 sm:mb-15">
           <h1 className="text-6xl text-white-50 font-extrabold tracking-tight mb-3">
             Experience
           </h1>
-          <p className="text-gray-400 text-lg">
-            Bold timeline with modern UI elements
-          </p>
-        </div>
+       </div>
 
         <div className="relative">
           {/* Bold gradient line */}
